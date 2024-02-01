@@ -1,5 +1,3 @@
-'use-strict'
-
 let num: number;
 let str: string;
 let bool: boolean;
@@ -58,4 +56,31 @@ const ErrorHandler = (error: string): never => {
     throw new Error(error)
 }
 
-const error = ErrorHandler("error")
+ErrorHandler("Test Error")
+
+
+const userName = 'Godwin'
+
+let age = 12;
+age = 30;
+console.log(userName, age)
+
+
+const persons = {
+    name: 'Max',
+    age: 30
+}
+
+const copiedPerson = { ...persons };
+
+console.log({ persons, copiedPerson })
+
+const personArray = [];
+
+const addNums = (...numbers: [number, number, number]) => {
+    return numbers.reduce((curResult, curVal) => {
+        return curResult + curVal
+    }, 0)
+}
+
+console.log('addNums', addNums(3, 4, 5))
